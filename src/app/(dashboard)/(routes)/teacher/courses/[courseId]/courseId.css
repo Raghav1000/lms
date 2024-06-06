@@ -1,0 +1,72 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.customise {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.customise h2 {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.customise .tag {
+  display: flex;
+  color: black !important;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  gap: 0.5rem;
+  padding: 0.4rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.title-form-container {
+  margin-block: 1rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+  background-color: #ffb70015;
+  border: 1px solid #ffb70035;
+  max-width: 300px;
+}
+
+.heading-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title-info {
+  margin-top: 1rem;
+}
+.title-form-container button {
+  margin-top: 0.8rem;
+  background-color: black;
+  width: max-content;
+  margin-left: auto;
+}
+
+.image-container {
+  background-color: #ffb70015;
+  border: 1px solid #ffb70035;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+.form-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-left-container {
+  margin-top: 1rem;
+}

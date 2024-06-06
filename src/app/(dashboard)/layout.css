@@ -1,0 +1,53 @@
+.menu-bg {
+  background-color: white !important;
+  box-shadow: 5px 0 5px -5px #33333320;
+}
+
+.ant-layout-sider-trigger {
+  /* background-color: whitesmoke !important; */
+}
+.ant-layout-sider-trigger > span {
+  color: black;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  padding-left: 1.8rem;
+  margin-bottom: 1.3rem;
+}
+
+.app-logo > h2 {
+  font-size: 1.1rem;
+  color: #ffb700;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 5px -5px #33333320;
+  padding-inline: 1.5rem;
+}
+
+.main-layout {
+  background-color: white !important;
+}
+
+.welcome span {
+  font-weight: 600;
+}
+
+.header-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.children-container {
+  padding: 1.5rem;
+}
