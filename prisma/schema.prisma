@@ -45,11 +45,11 @@ model Attachment {
 model Chapter {
   id          String  @id @default(auto()) @map("_id") @db.ObjectId
   title       String
-  description String
-  videoUrl    String
-  position    Int
-  isPublished Boolean
-  isFree      Boolean
+  description String?
+  videoUrl    String?
+  position    Int?
+  isPublished Boolean?
+  isFree      Boolean?
 
   muxData MuxData?
 

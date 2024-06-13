@@ -63,7 +63,7 @@ const UploadCourseImage = (props: {
   return (
     <div className="image-container">
       Click on the image to upload course image.
-      <Flex gap="middle">
+      <Flex gap="mi˚˙ddle">
         <Upload
           name="avatar"
           listType="picture-card"

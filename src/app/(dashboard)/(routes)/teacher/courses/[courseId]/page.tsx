@@ -8,11 +8,20 @@ import DescriptionForm from "./_components/DescriptionForm";
 import UploadCourseImage from "./_components/UploadCourseImage";
 import SelectCategoryForm from "./_components/SelectCategoryForm";
 import PriceForm from "./_components/PriceForm";
+import ChaptersForm from "./_components/ChaptersForm";
 
 const Course = async ({ params }: { params: { courseId: string } }) => {
+  
   const course = await prisma.course.findUnique({
     where: {
       id: params?.courseId,
+    },
+    include: {
+      chapters: {
+        orderBy: {
+          position: "asc",
+        },
+      },
     },
   });
 
@@ -67,6 +76,12 @@ const Course = async ({ params }: { params: { courseId: string } }) => {
         <div className="form-left-container">
           <div>
             <Tag>Customise your chapters here </Tag>
+            <ChaptersForm
+              data={{
+                courseId: course?.id,
+                chapters: course?.chapters,
+              }}
+            />
           </div>
           <div>
             <PriceForm

@@ -24,3 +24,7 @@
 .ant-menu-item-selected svg {
   color: black !important;
 }
+
+.ql-tooltip .ql-hidden {
+  display: none;
+}
