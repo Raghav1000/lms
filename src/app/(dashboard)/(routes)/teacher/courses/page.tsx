@@ -1,22 +1,18 @@
-"use client"
-import { Button } from "antd";
 import React from "react";
-import { IoAddOutline } from "react-icons/io5";
 import "./styles.css";
-import { useRouter } from "next/navigation";
+import { prisma } from "@/app/prisma/prisma.config";
+import CoursesTable from "./[courseId]/_components/CoursesTable";
 
-const CoursesPage = () => {
-  const router = useRouter();
+const CoursesPage = async () => {
+  const courses = await prisma.course.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
   return (
     <div className="course-page-container">
-      <Button
-        className="add-course"
-        onClick={() => router.push("/teacher/add-course")}
-        icon={<IoAddOutline size={18} />}
-        type="primary"
-      >
-        Add Course
-      </Button>
+      <CoursesTable courses={courses} />
     </div>
   );
 };

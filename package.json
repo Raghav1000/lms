@@ -11,6 +11,8 @@
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
     "@clerk/nextjs": "^5.1.2",
+    "@mux/mux-node": "^8.7.1",
+    "@mux/mux-player-react": "^2.7.0",
     "@prisma/client": "^5.14.0",
     "antd": "^5.17.3",
     "axios": "^1.7.2",

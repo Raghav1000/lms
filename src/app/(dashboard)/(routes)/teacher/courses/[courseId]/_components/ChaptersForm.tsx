@@ -74,16 +74,20 @@ const ChaptersForm = (props: {
         return (
           <div className="course-title-container">
             {idx + 1}. {item?.title}
-            <Button
-              size="small"
-              onClick={() =>
-                push(
-                  `/teacher/courses/${props?.data?.courseId}/chapters/${item?.id}`
-                )
-              }
-            >
-              <AiOutlineEdit />
-            </Button>
+            <div style={{ display: "flex" }}>
+              {item?.isFree && <Tag color="blue">Free</Tag>}
+              {item?.isPublished && <Tag color="green-inverse">Published</Tag>}
+              <Button
+                size="small"
+                onClick={() =>
+                  push(
+                    `/teacher/courses/${props?.data?.courseId}/chapters/${item?.id}`
+                  )
+                }
+              >
+                <AiOutlineEdit />
+              </Button>
+            </div>
           </div>
         );
       })}

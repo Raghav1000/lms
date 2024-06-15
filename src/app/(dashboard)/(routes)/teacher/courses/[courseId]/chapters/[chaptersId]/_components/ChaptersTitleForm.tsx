@@ -1,6 +1,7 @@
 "use client";
 import { Input, Button } from "antd";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState, useEffect, ChangeEvent } from "react";
 import toast from "react-hot-toast";
 import { AiOutlineEdit } from "react-icons/ai";
@@ -16,6 +17,7 @@ interface ChaptersTitleForm {
 const ChaptersTitleForm = (props: ChaptersTitleForm) => {
   const [isEditing, setIsEditing] = useState(false);
   const [title, setTitle] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     setTitle(props?.initialData?.title);
@@ -33,6 +35,7 @@ const ChaptersTitleForm = (props: ChaptersTitleForm) => {
       setIsEditing(false);
       toast?.error("Something went wrong");
     }
+    router.refresh();
   };
 
   return (
