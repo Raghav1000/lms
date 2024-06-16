@@ -20,7 +20,7 @@ const Browse = async ({
   return (
     <div>
       {categories?.map((item) => (
-        <CategoryItem category={item} />
+        <CategoryItem key={item?.id} category={item} />
       ))}
       <CoursesList courses={courses} />
     </div>

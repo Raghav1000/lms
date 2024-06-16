@@ -72,7 +72,7 @@ const ChaptersForm = (props: {
       )}
       {chapters?.map((item, idx) => {
         return (
-          <div className="course-title-container">
+          <div key={item?.id} className="course-title-container">
             {idx + 1}. {item?.title}
             <div style={{ display: "flex" }}>
               {item?.isFree && <Tag color="blue">Free</Tag>}

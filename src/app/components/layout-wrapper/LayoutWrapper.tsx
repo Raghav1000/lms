@@ -17,7 +17,7 @@ const LayoutWrapper = ({ children }: Props) => {
   useEffect(() => {
     const id = localStorage.getItem("userId");
     if (!id) router.push("/sign-in");
-  }, [userId]);
+  }, [userId, router]);
 
   return (
     <AntdConfigProvider>
