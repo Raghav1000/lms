@@ -43,7 +43,7 @@ model Attachment {
 }
 
 model Chapter {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String?
   videoUrl    String?
@@ -83,6 +83,7 @@ model UserProgress {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
+  @@unique([userId, chapterId])
   @@index([chapterId])
 }
 
@@ -95,6 +96,9 @@ model Purchase {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@unique([userId, courseId])
+  @@index([courseId])
 }
 
 model StripeCustomer {
